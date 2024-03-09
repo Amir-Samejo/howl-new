@@ -1,8 +1,32 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import Preloader from './Preloader';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    // State to manage menu visibility
+    const [isOpen, setIsOpen] = useState(false);
+
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 80);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
+
+
     return (
         <>
+            <Preloader />
 
 
             {/* ==================== Start progress-scroll-button ==================== */}
@@ -14,10 +38,10 @@ const Navbar = () => {
             {/* ==================== End progress-scroll-button ==================== */}
 
             {/* ==================== Start Navgition ==================== */}
-            <div id="navi" className="topnav">
+            <div id="navi" className={`bg-${!isScrolled ? 'transparent topnav' : 'dark topnav'}`}>
                 <div className="container">
                     <div className="logo icon-img-120">
-                        <a href="#"><h5>HOWL</h5></a>
+                        <Link to="/"><h5>HOWL</h5></Link>
                     </div>
                     <div className="menu-icon cursor-pointer">
                         <span className="icon">
@@ -41,17 +65,27 @@ const Navbar = () => {
                         <div className="col-lg-7">
                             <div className="menu-links">
                                 <ul className="main-menu rest">
+
                                     <li>
-                                        <div className="o-hidden">
-                                            <div className="link cursor-pointer dmenu"><span className="fill-text" data-text="Home">Home</span></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="o-hidden">
-                                            <div className="link cursor-pointer dmenu"><span className="fill-text" data-text="About">About</span>
+                                        <Link to={"/"}>
+                                            <div className="o-hidden">
+                                                <div className="link cursor-pointer dmenu"><span className="fill-text" data-text="Home">Home</span></div>
                                             </div>
-                                        </div>
+                                        </Link>
                                     </li>
+
+
+                                    <li>
+                                        <Link to='/about'>
+                                            <div className="o-hidden">
+                                                <div className="link cursor-pointer dmenu">
+                                                    <span className="fill-text" data-text="About">About</span>
+                                                </div>
+                                            </div>
+                                        </Link>
+                                    </li>
+
+
                                     <li>
                                         <div className="o-hidden">
                                             <div className="link cursor-pointer dmenu"><span className="fill-text" data-text="Our Services">Our Services</span> <i />
@@ -60,50 +94,39 @@ const Navbar = () => {
                                         <div className="sub-menu">
                                             <ul>
                                                 <li>
-                                                    <a href="#" className="sub-link">Digital Marketing</a>
+                                                    <Link to="#" className="sub-link">Digital Marketing</Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="sub-link">Content Writing</a>
+                                                    <Link to="#" className="sub-link">Content Writing</Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="sub-link">SEO</a>
+                                                    <Link to="#" className="sub-link">SEO</Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="sub-link">UI/UX Design</a>
+                                                    <Link to="#" className="sub-link">UI/UX Design</Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="sub-link">Graphic Designing</a>
+                                                    <Link to="#" className="sub-link">Graphic Designing</Link>
                                                 </li>
                                             </ul>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div className="o-hidden">
-                                            <div className="link cursor-pointer dmenu"><span className="fill-text" data-text="Portfolio">Portfolio</span></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="o-hidden">
-                                            <div className="link cursor-pointer dmenu"><span className="fill-text" data-text="Contact">Contact</span></div>
-                                        </div>
-                                        {/* <div className="sub-menu">
-                                            <ul>
-                                                <li>
-                                                    <a className="sub-link" href="blog-classic.html">Blog Standerd</a>
-                                                </li>
-                                                <li>
-                                                    <a className="sub-link" href="blog-list.html">Blog List</a>
-                                                </li>
-                                                <li>
-                                                    <a className="sub-link" href="blog-half-img.html">Image Out Frame</a>
-                                                </li>
-                                                <li>
-                                                    <a className="sub-link" href="blog-details.html">Blog Details</a>
-                                                </li>
-                                            </ul>
-                                        </div> */}
                                     </li>
 
+                                    <li>
+                                        <Link to={"/portfolio"} >
+                                            <div className="o-hidden">
+                                                <div className="link cursor-pointer dmenu"><span className="fill-text" data-text="Portfolio">Portfolio</span></div>
+                                            </div>
+                                        </Link>
+                                    </li>
+
+                                    <li>
+                                        <Link to={"/contact"} >
+                                            <div className="o-hidden">
+                                                <div className="link cursor-pointer dmenu"><span className="fill-text" data-text="Contact">Contact</span></div>
+                                            </div>
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -141,9 +164,6 @@ const Navbar = () => {
                 </div>
             </div>
             {/* ==================== End Navgition ==================== */}
-            <main>
-
-            </main>
 
 
         </>

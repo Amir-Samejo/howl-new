@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Services = () => {
+const SingleService = () => {
     return (
         <>
 
@@ -486,4 +486,4 @@ const Services = () => {
     )
 }
 
-export default Services
+export default SingleService

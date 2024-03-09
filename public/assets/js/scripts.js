@@ -1,14 +1,3 @@
-/*-----------------------------------------------------------------------------------
-
-    Theme Name: GeekFolio
-    Theme URI: http://
-    Description: Creative Agency & Portfolio
-    Author: UI-ThemeZ
-    Author URI: http://themeforest.net/user/UI-ThemeZ
-    Version: 1.0
-
------------------------------------------------------------------------------------*/
-
 
 $(function () {
 
@@ -119,11 +108,50 @@ $(function () {
             $('.hamenu').animate({ left: 0 });
 
             $('.topnav .menu-icon').addClass('open');
+            $('.hamenu .menu-links .main-menu .sub-menu').slideUp();
+            $('.hamenu .menu-links .main-menu .dmenu').removeClass("dopen");
 
             navDark.addClass("navlit");
             logoChan.attr('src', 'img/logo-light.png');
 
             window.addEventListener('scroll', noScroll);
+
+
+        } else {
+
+            $('.hamenu').delay(300).animate({ left: "-100%" });
+
+            $('.topnav .menu-icon').removeClass('open');
+
+            $('.hamenu .menu-links .main-menu .sub-menu').slideUp();
+
+            $('.hamenu .menu-links .main-menu .dmenu').removeClass("dopen");
+
+            navDark.removeClass("navlit");
+            logoChan.attr('src', 'img/logo-dark.png');
+
+            window.removeEventListener('scroll', noScroll);
+        }
+    });
+
+    $('.hamenu .menu-links .main-menu .dmenu').on('click', function () {
+        open = !open;
+
+        $('.hamenu').toggleClass("open");
+
+        if (open) {
+
+            $('.hamenu').animate({ left: 0 });
+
+            $('.topnav .menu-icon').addClass('open');
+            $('.hamenu .menu-links .main-menu .sub-menu').slideUp();
+            $('.hamenu .menu-links .main-menu dmenu').removeClass("dopen");
+
+            navDark.addClass("navlit");
+            logoChan.attr('src', 'img/logo-light.png');
+
+            window.addEventListener('scroll', noScroll);
+
 
         } else {
 
