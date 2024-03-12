@@ -9,9 +9,9 @@ const About = () => {
                     <div className="row mb-80">
                         <div className="col-lg-5">
                             <div className="sec-lg-head md-mb30">
-                                <h6 className="dot-titl-non mb-15 wow fadeIn">About US</h6>
+                                <h6 className="dot-titl-non mb-15 wow fadeIn">Our Story</h6>
                                 <h2 className="d-rotate wow">
-                                    <span className="rotate-text">Our Team of Dedicated Digital Professionals.</span>
+                                    <span className="rotate-text">Unleashing Digital Excellence.</span>
                                 </h2>
                             </div>
                         </div>
@@ -19,14 +19,14 @@ const About = () => {
                             <div className="text">
                                 <p className="d-slideup wow">
                                     <span className="sideup-text">
-                                        <span className="up-text">Through our years of experience, we’ve also learned that while</span>
+                                        <span className="up-text">At HowlDigits, we're more than just a Digital Agency</span>
                                     </span>
                                     <span className="sideup-text">
-                                        <span className="up-text">each channel has its own set of advantages, they all work best</span>
+                                        <span className="up-text"> we're a pack of passionate innovators, dedicated to transforming the digital landscape one project at a time.</span>
                                     </span>
-                                    <span className="sideup-text">
+                                    {/* <span className="sideup-text">
                                         <span className="up-text">when strategically paired with other channels.</span>
-                                    </span>
+                                    </span> */}
                                 </p>
                                 <div className="vew-all mt-50 ml-30 wow fadeIn" data-wow-delay=".8s">
                                     <a href="blog-classic.html">View All Our News
@@ -59,39 +59,49 @@ const About = () => {
                                 </div>
                             </div>
                         </div>
+
                         <div className="col-lg-5 valign rest">
                             <div className="cont">
-                                <h2 className="d-rotate wow">
+                                {/* <h2 className="d-rotate wow">
                                     <span className="rotate-text">Unlock Revenue Growth for Your Business.</span>
-                                </h2>
-                                <div className="feat mt-80">
-                                    <div className="item-flex d-flex align-items-center mb-50 wow fadeIn" data-wow-delay=".4s">
+                                </h2> */}
+                                <div className="feat mt-20">
+
+                                    <div className="item-flex d-flex align-items-center mb-30 wow fadeIn" data-wow-delay=".4s">
                                         <div>
                                             <div className="icon-img-50">
                                                 <img src="assets/imgs/serv-icons/0.png" alt />
                                             </div>
                                         </div>
                                         <div className="cont ml-30">
-                                            <h6>High Standerd</h6>
-                                            <p className="fz-15">Adipiscing elit, sed do eiusmod tempor incididunt ut
-                                                labore
-                                                et
-                                                dolore magna aliqua.
+                                            <h6>Embracing the Spirit of the Wolf Pack</h6>
+                                            <p className="fz-15">Like the resilient and collaborative nature of wolves, we work together seamlessly to tackle challenges and achieve remarkable results for our clients.
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="item-flex d-flex align-items-center wow fadeIn" data-wow-delay=".8s">
+
+                                    <div className="item-flex d-flex align-items-center mb-30 wow fadeIn" data-wow-delay=".8s">
                                         <div>
                                             <div className="icon-img-50">
                                                 <img src="assets/imgs/serv-icons/1.png" alt />
                                             </div>
                                         </div>
                                         <div className="cont ml-30">
-                                            <h6>Ease of Communication</h6>
-                                            <p className="fz-15">Adipiscing elit, sed do eiusmod tempor incididunt ut
-                                                labore
-                                                et
-                                                dolore magna aliqua.
+                                            <h6>Driven by Innovation</h6>
+                                            <p className="fz-15">We thrive on pushing boundaries and exploring new horizons in the digital realm. With a finger on the pulse of emerging technologies and trends, we're always ahead of the curve.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="item-flex d-flex align-items-center wow fadeIn" data-wow-delay=".12s">
+                                        <div>
+                                            <div className="icon-img-50">
+                                                <img src="assets/imgs/serv-icons/1.png" alt />
+                                            </div>
+                                        </div>
+                                        <div className="cont ml-30">
+                                            <h6>Empowering Your Digital Journey</h6>
+                                            <p className="fz-15">From web design and development to SEO, social media marketing, and artwork designs, we empower businesses to unleash their full digital potential and soar to new heights of success.
                                             </p>
                                         </div>
                                     </div>

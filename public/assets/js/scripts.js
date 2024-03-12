@@ -134,7 +134,24 @@ $(function () {
         }
     });
 
+    // $('.hamenu .menu-links .main-menu .dmenu').on('click', function (event) {
+    //     event.stopPropagation(); // Prevents the event from bubbling up to the parent elements
+    //     const isOpen = $(this).hasClass('dopen');
+
+    //     if (isOpen) {
+    //         // If the dropdown is not already open, open it
+    //         $(this).addClass('dopen');
+    //         $('.sub-menu', $(this).parent()).slideDown();
+    //     } else {
+    //         // If the dropdown is already open, close it
+    //         $(this).removeClass('dopen');
+    //         $('.sub-menu', $(this).parent()).slideUp();
+    //     }
+    // });
+
+
     $('.hamenu .menu-links .main-menu .dmenu').on('click', function () {
+
         open = !open;
 
         $('.hamenu').toggleClass("open");
@@ -145,7 +162,9 @@ $(function () {
 
             $('.topnav .menu-icon').addClass('open');
             $('.hamenu .menu-links .main-menu .sub-menu').slideUp();
-            $('.hamenu .menu-links .main-menu dmenu').removeClass("dopen");
+            $('.hamenu .menu-links .main-menu .dmenu').removeClass("dopen");
+
+
 
             navDark.addClass("navlit");
             logoChan.attr('src', 'img/logo-light.png');
@@ -162,6 +181,8 @@ $(function () {
             $('.hamenu .menu-links .main-menu .sub-menu').slideUp();
 
             $('.hamenu .menu-links .main-menu .dmenu').removeClass("dopen");
+
+
 
             navDark.removeClass("navlit");
             logoChan.attr('src', 'img/logo-dark.png');
@@ -801,7 +822,7 @@ $(document).ready(function () {
     updateProgress();
     $(window).scroll(updateProgress);
     var offset = 150;
-    var duration = 550;
+    var duration = 1500;
     jQuery(window).on('scroll', function () {
         if (jQuery(this).scrollTop() > offset) {
             jQuery('.progress-wrap').addClass('active-progress');

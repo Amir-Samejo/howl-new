@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import Preloader from './Preloader';
 import { Link } from 'react-router-dom';
+import Cursor from './Cursor';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-
-    // State to manage menu visibility
-    const [isOpen, setIsOpen] = useState(false);
-
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,14 +18,26 @@ const Navbar = () => {
         };
     }, []);
 
-
-
+    const menuLinks = [
+        { label: "Home", path: "/" },
+        { label: "About", path: "/about" },
+        {
+            label: "Services", dropdown: [
+                { label: "Digital Marketing", path: "#" },
+                { label: "Content Writing", path: "#" },
+                { label: "SEO", path: "#" },
+                { label: "UI/UX Design", path: "#" },
+                { label: "Graphic Designing", path: "#" }
+            ]
+        },
+        { label: "Portfolio", path: "/portfolio" },
+        { label: "Contact", path: "/contact" }
+    ];
 
     return (
         <>
             <Preloader />
-
-
+            <Cursor />
             {/* ==================== Start progress-scroll-button ==================== */}
             <div className="progress-wrap cursor-pointer">
                 <svg className="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -37,8 +46,7 @@ const Navbar = () => {
             </div>
             {/* ==================== End progress-scroll-button ==================== */}
 
-            {/* ==================== Start Navgition ==================== */}
-            <div id="navi" className={`bg-${!isScrolled ? 'transparent topnav' : 'dark topnav'}`}>
+            <div id="navi" className={`bg-${isScrolled ? 'dark' : 'transparent'} topnav`}>
                 <div className="container">
                     <div className="logo icon-img-120">
                         <Link to="/"><h5>HOWL</h5></Link>
@@ -65,68 +73,35 @@ const Navbar = () => {
                         <div className="col-lg-7">
                             <div className="menu-links">
                                 <ul className="main-menu rest">
-
-                                    <li>
-                                        <Link to={"/"}>
-                                            <div className="o-hidden">
-                                                <div className="link cursor-pointer dmenu"><span className="fill-text" data-text="Home">Home</span></div>
-                                            </div>
-                                        </Link>
-                                    </li>
-
-
-                                    <li>
-                                        <Link to='/about'>
-                                            <div className="o-hidden">
-                                                <div className="link cursor-pointer dmenu">
-                                                    <span className="fill-text" data-text="About">About</span>
+                                    {menuLinks.map((link, index) => (
+                                        <li key={index}>
+                                            {link.dropdown ? (
+                                                <div className="o-hidden">
+                                                    <div className="link cursor-pointer dmenu">
+                                                        <span className="fill-text" data-text={link.label}>{link.label}</span>
+                                                        <i />
+                                                    </div>
+                                                    <div className="sub-menu">
+                                                        <ul>
+                                                            {link.dropdown.map((item, idx) => (
+                                                                <li key={idx}>
+                                                                    <Link to={item.path} className="sub-link">{item.label}</Link>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </Link>
-                                    </li>
-
-
-                                    <li>
-                                        <div className="o-hidden">
-                                            <div className="link cursor-pointer dmenu"><span className="fill-text" data-text="Our Services">Our Services</span> <i />
-                                            </div>
-                                        </div>
-                                        <div className="sub-menu">
-                                            <ul>
-                                                <li>
-                                                    <Link to="#" className="sub-link">Digital Marketing</Link>
-                                                </li>
-                                                <li>
-                                                    <Link to="#" className="sub-link">Content Writing</Link>
-                                                </li>
-                                                <li>
-                                                    <Link to="#" className="sub-link">SEO</Link>
-                                                </li>
-                                                <li>
-                                                    <Link to="#" className="sub-link">UI/UX Design</Link>
-                                                </li>
-                                                <li>
-                                                    <Link to="#" className="sub-link">Graphic Designing</Link>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <Link to={"/portfolio"} >
-                                            <div className="o-hidden">
-                                                <div className="link cursor-pointer dmenu"><span className="fill-text" data-text="Portfolio">Portfolio</span></div>
-                                            </div>
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link to={"/contact"} >
-                                            <div className="o-hidden">
-                                                <div className="link cursor-pointer dmenu"><span className="fill-text" data-text="Contact">Contact</span></div>
-                                            </div>
-                                        </Link>
-                                    </li>
+                                            ) : (
+                                                <Link to={link.path}>
+                                                    <div className="o-hidden">
+                                                        <div className="link cursor-pointer dmenu">
+                                                            <span className="fill-text" data-text={link.label}>{link.label}</span>
+                                                        </div>
+                                                    </div>
+                                                </Link>
+                                            )}
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
@@ -163,11 +138,8 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            {/* ==================== End Navgition ==================== */}
-
-
         </>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;

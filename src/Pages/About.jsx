@@ -207,6 +207,7 @@ const About = () => {
                     </div>
                 </section>
                 {/* ==================== End about ==================== */}
+
                 {/* ==================== Start Testimonials ==================== */}
                 <section className="testim-vrt sub-bg">
                     <div className="container">

@@ -11,6 +11,7 @@ import Services from './Pages/Services';
 import SingleService from './Pages/SingleService'
 import SingleTeam from './Pages/SingleTeam'
 import Team from './Pages/Team';
+import Cursor from './components/Cursor';
 
 
 const router = createBrowserRouter(
@@ -33,30 +34,14 @@ const router = createBrowserRouter(
 
 
 function App() {
-  const [cursorX, setCursorX] = useState()
-  const [cursorY, setCursorY] = useState()
-
-  useEffect(() => {
-    window.addEventListener('mousemove', (e) => {
-      setCursorX(e.pageX)
-      setCursorY(e.pageY)
-
-    })
-
-  })
 
   return (
-
-
 
     <div className="App">
 
 
       <RouterProvider router={router} />
-
-      <div className="cursor" style={{ left: cursorX + "px", top: cursorY + "px" }}>
-      </div>
-
+      {/* <Cursor /> */}
     </div>
   );
 }
