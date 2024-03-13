@@ -56,14 +56,14 @@ const Slider = () => {
                             </div>
 
                             <div className="swiper-slide">
-                                <div className="bg-img valign" data-background="assets/imgs/works/full/3.jpg" data-overlay-dark={1}>
+                                <div className="bg-img valign" data-background="assets/imgs/works/full/3.png" data-overlay-dark={1}>
                                     <div className="container">
                                         <div className="row">
                                             <div className="col-lg-11 offset-lg-1">
                                                 <div className="caption">
                                                     <h1>
                                                         <a href="project-details1.html">
-                                                            <span data-swiper-parallax={-1000}>Howl for <br />Creative Genius</span>
+                                                            <span data-swiper-parallax={-1000}>Howl for <br />Creative <br />Genius</span>
                                                         </a>
                                                     </h1>
                                                     <h6 className="sub-title mb-30" data-swiper-parallax={-2000}>Bringing Your Vision to Life,<br /> One Pixel at a Time.</h6>
