@@ -10208,7 +10208,7 @@ header.in-box {
   }
 
   .slider .parallax-slider .swiper-slide .bg-img {
-    background-position: center center !important;
+    background-position: 80% 60% !important;
   }
 
   .slides-nav__index {
