@@ -150,7 +150,7 @@ $(function () {
     // });
 
 
-    $('.hamenu .menu-links .main-menu .dmenu').on('click', function () {
+    $('.hamenu .menu-links .main-menu').on('click', function () {
 
         open = !open;
 
@@ -181,8 +181,6 @@ $(function () {
             $('.hamenu .menu-links .main-menu .sub-menu').slideUp();
 
             $('.hamenu .menu-links .main-menu .dmenu').removeClass("dopen");
-
-
 
             navDark.removeClass("navlit");
             logoChan.attr('src', 'img/logo-dark.png');
@@ -653,22 +651,22 @@ $(function () {
         hoverAnim.style.transform = `translate(${xMove}px, ${yMove}px)`;
         if (e.type === 'mouseleave') hoverAnim.style.transform = '';
     };
-    const editCursor = e => {
-        const { clientX: x, clientY: y } = e;
-        // cursor.style.left = x + 'px';
-        // cursor.style.top = y + 'px';
-    };
-    link.forEach(b => b.addEventListener('mousemove', animateit));
-    link.forEach(b => b.addEventListener('mouseleave', animateit));
-    window.addEventListener('mousemove', editCursor);
+    // const editCursor = e => {
+    //     const { clientX: x, clientY: y } = e;
+    //     // cursor.style.left = x + 'px';
+    //     // cursor.style.top = y + 'px';
+    // };
+    // link.forEach(b => b.addEventListener('mousemove', animateit));
+    // link.forEach(b => b.addEventListener('mouseleave', animateit));
+    // window.addEventListener('mousemove', editCursor);
 
-    $("a, .cursor-pointer").hover(
-        function () {
-            $(".cursor").addClass("cursor-active");
-        }, function () {
-            $(".cursor").removeClass("cursor-active");
-        }
-    );
+    // $("a, .cursor-pointer").hover(
+    //     function () {
+    //         $(".cursor").addClass("cursor-active");
+    //     }, function () {
+    //         $(".cursor").removeClass("cursor-active");
+    //     }
+    // );
 
 
 
@@ -1298,42 +1296,6 @@ $(function () {
 
         var wind = $(window);
 
-        /* =============================================================================
-        -------------------------------  Smooth Footer   -------------------------------
-        ============================================================================= */
-
-        gsap.set('.footer-container', { yPercent: -50 })
-        const uncover = gsap.timeline({ paused: true })
-        uncover
-            .to('.footer-container', { yPercent: 0, ease: 'none' })
-            ;
-
-        ScrollTrigger.create({
-            trigger: 'main',
-            start: 'bottom bottom',
-            end: '+=50%',
-            animation: uncover,
-            scrub: true,
-        });
-
-
-        /* =============================================================================
-       -------------------------------  Smooth contact   -------------------------------
-       ============================================================================= */
-
-        gsap.set('.contact-container', { yPercent: -50 })
-        const cover = gsap.timeline({ paused: true })
-        cover
-            .to('.contact-container', { yPercent: 0, ease: 'none' })
-            ;
-
-        ScrollTrigger.create({
-            trigger: '.main-box',
-            start: 'bottom bottom',
-            end: '+=50%',
-            animation: cover,
-            scrub: true,
-        });
 
 
         /* =============================================================================

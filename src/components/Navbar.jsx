@@ -21,15 +21,7 @@ const Navbar = () => {
     const menuLinks = [
         { label: "Home", path: "/" },
         { label: "About", path: "/about" },
-        {
-            label: "Services", dropdown: [
-                { label: "Digital Marketing", path: "#" },
-                { label: "Content Writing", path: "#" },
-                { label: "SEO", path: "#" },
-                { label: "UI/UX Design", path: "#" },
-                { label: "Graphic Designing", path: "#" }
-            ]
-        },
+        { label: "Services", path: "/services" },
         { label: "Portfolio", path: "/portfolio" },
         { label: "Contact", path: "/contact" }
     ];
@@ -37,7 +29,7 @@ const Navbar = () => {
     return (
         <>
             <Preloader />
-            <Cursor />
+
             {/* ==================== Start progress-scroll-button ==================== */}
             <div className="progress-wrap cursor-pointer">
                 <svg className="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -45,7 +37,7 @@ const Navbar = () => {
                 </svg>
             </div>
             {/* ==================== End progress-scroll-button ==================== */}
-
+            <Cursor />
             <div id="navi" className={`bg-${isScrolled ? 'dark' : 'transparent'} topnav`}>
                 <div className="container">
                     <div className="logo icon-img-120">
@@ -75,23 +67,7 @@ const Navbar = () => {
                                 <ul className="main-menu rest">
                                     {menuLinks.map((link, index) => (
                                         <li key={index}>
-                                            {link.dropdown ? (
-                                                <div className="o-hidden">
-                                                    <div className="link cursor-pointer dmenu">
-                                                        <span className="fill-text" data-text={link.label}>{link.label}</span>
-                                                        <i />
-                                                    </div>
-                                                    <div className="sub-menu">
-                                                        <ul>
-                                                            {link.dropdown.map((item, idx) => (
-                                                                <li key={idx}>
-                                                                    <Link to={item.path} className="sub-link">{item.label}</Link>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            ) : (
+                                            {(
                                                 <Link to={link.path}>
                                                     <div className="o-hidden">
                                                         <div className="link cursor-pointer dmenu">

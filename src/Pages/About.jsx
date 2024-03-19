@@ -63,6 +63,7 @@ const About = () => {
                     </div>
                 </header>
                 {/* ==================== End Slider ==================== */}
+
                 {/* ==================== Start About ==================== */}
                 <section className="pg-about section-padding sub-bg">
                     <div className="container">

@@ -638,6 +638,7 @@ img {
   transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
+
 .cursor {
   pointer-events: none;
   position: fixed;
@@ -3324,7 +3325,7 @@ body.loaded {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999999;
+  z-index: 990;
   padding: 20px 0;
   color: #fff;
   -webkit-transition: all .7s;
@@ -3465,10 +3466,11 @@ body.loaded {
   background: #1a1a1a;
   padding: 120px 30px 30px;
   overflow: hidden;
-  z-index: 9999;
+  z-index: 99;
   -webkit-transition: all 0.5s cubic-bezier(1, 0, 0.55, 1);
   -o-transition: all 0.5s cubic-bezier(1, 0, 0.55, 1);
   transition: all 0.5s cubic-bezier(1, 0, 0.55, 1);
+
 }
 
 .hamenu.open .menu-links .main-menu>li .link {
