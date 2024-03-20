@@ -11,7 +11,7 @@ import Services from './Pages/Services';
 import SingleService from './Pages/SingleService'
 import SingleTeam from './Pages/SingleTeam'
 import Team from './Pages/Team';
-import Cursor from './components/Cursor';
+import Services2 from './Pages/Services2'
 
 
 const router = createBrowserRouter(
@@ -24,6 +24,7 @@ const router = createBrowserRouter(
       <Route path='/portfolio' element={<Portfolio />} />
       <Route path='/pricing' element={<Pricing />} />
       <Route path='/services' element={<Services />} />
+      <Route path='/services2' element={<Services2 />} />
       <Route path='/service' element={<SingleService />} />
       <Route path='/singleteam' element={<SingleTeam />} />
       <Route path='/team' element={<Team />} />

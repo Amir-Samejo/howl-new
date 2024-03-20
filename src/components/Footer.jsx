@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
 
@@ -85,15 +86,13 @@ const Footer = () => {
                             <div className="row">
                                 <div className="col-lg-4">
                                     <div className="logo">
-                                        <a href="#">
-                                            <img src="assets/imgs/logo-light.png" alt />
-                                        </a>
+                                        <Link to="/"><h5>HOWL</h5></Link>
                                     </div>
                                 </div>
                                 <div className="col-lg-8">
                                     <div className="copyright d-flex">
                                         <div className="ml-auto">
-                                            <p className="fz-13">© 2023 Geekfolio is Proudly Powered by <span className="underline"><a href="https://themeforest.net/user/ui-themez" target="_blank">Ui-ThemeZ</a></span></p>
+                                            <p className="fz-13">© 2023 HOWL Digits is Proudly Powered by <span className="underline"><a href="https://howldigits.com" target="_blank">howldigits.com</a></span></p>
                                         </div>
                                     </div>
                                 </div>
