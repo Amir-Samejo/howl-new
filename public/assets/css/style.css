@@ -1,19 +1,5 @@
 @charset "UTF-8";
 
-/*-----------------------------------------------------------------------------------
-
-    Theme Name: Geekfolio
-    Theme URI: http://
-    Description: Creative Agency & Portfolio
-    Author: UI-ThemeZ
-    Author URI: http://themeforest.net/user/UI-ThemeZ
-    Version: 1.0
-
------------------------------------------------------------------------------------*/
-/* Variables
------------------------------------------------------------------*/
-/* Typography
------------------------------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -4588,12 +4574,12 @@ body.loaded {
 }
 
 .skills-exp .skill-item .item {
-  padding: 50px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 100px;
-  width: 100%;
+  padding: 30px 5px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  width: 15%;
   text-align: center;
-  margin: 0 10px;
+  margin: 10px;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
   transition: all .4s;
@@ -5340,66 +5326,7 @@ body.loaded {
   opacity: 1;
 }
 
-/* Career
------------------------------------------------------------------*/
-.career-serv .img {
-  height: 700px;
-}
 
-.career-serv .img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center top;
-  object-position: center top;
-}
-
-.career-serv li {
-  padding: 10px 28px;
-  margin-top: 10px;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.1);
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.career-serv li .icon {
-  font-size: 28px;
-  margin-right: 10px;
-}
-
-.career-box .list-item {
-  padding: 40px;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.career-box .list-item .butn {
-  padding: 4px 10px;
-  border-radius: 20px;
-  background: #1a1a1a;
-  margin-right: 10px;
-}
-
-.career-box .list-item .butn:nth-of-type(2) {
-  background: #55e6a5;
-  color: #1d1d1d;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.career-box .list-item .butn:nth-of-type(3) {
-  background: rgba(85, 230, 165, 0.1);
-  color: #55e6a5;
-}
 
 /* Contact
 -----------------------------------------------------------------*/
@@ -5478,175 +5405,6 @@ body.loaded {
   min-height: 180px;
 }
 
-/* Numbers
------------------------------------------------------------------*/
-.numbers h2 {
-  font-size: 120px;
-}
-
-.numbers h6 {
-  font-size: 16px;
-}
-
-.numbers.crev-num .item {
-  position: relative;
-  padding-left: 40px;
-}
-
-.numbers.crev-num .item:after {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: 0px;
-  bottom: -20px;
-  width: 100px;
-  border: 4px solid rgba(255, 255, 255, 0.03);
-}
-
-.numbers.crev-num h2 {
-  font-size: 80px;
-}
-
-.sideimg-numbers {
-  position: relative;
-}
-
-.sideimg-numbers .bg-right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  z-index: 2;
-}
-
-.sideimg-numbers .bg-right .vid-circle {
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  text-align: center;
-  border-radius: 50%;
-}
-
-.sideimg-numbers .bg-left {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 45%;
-  height: 100%;
-  z-index: 2;
-}
-
-.sideimg-numbers .bg-left .vid-circle {
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  text-align: center;
-  border-radius: 50%;
-}
-
-.sideimg-numbers .bg-img {
-  background-position: center center;
-}
-
-.sideimg-numbers .bg-img .vid {
-  position: relative;
-  z-index: 2;
-}
-
-.sideimg-numbers .bg-img .vid:after {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background: #1d1d1d;
-  border-radius: 50%;
-  z-index: -1;
-}
-
-.sideimg-numbers .numbers {
-  -webkit-transform: translateX(100px);
-  -ms-transform: translateX(100px);
-  transform: translateX(100px);
-  padding: 120px 100px 120px 0;
-  text-align: right;
-}
-
-.sideimg-numbers .numbers .item {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin-left: auto;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.sideimg-numbers .numbers .item:last-of-type {
-  padding: 0;
-  border: 0;
-}
-
-.sideimg-numbers .numbers .item h2 {
-  font-style: normal;
-}
-
-.coming {
-  min-height: 100vh;
-  position: relative;
-}
-
-.coming .bg-pattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: auto;
-  background-repeat: repeat;
-  opacity: .1;
-}
-
-.coming .clockdiv {
-  text-align: center;
-}
-
-.coming .clockdiv .dots {
-  position: relative;
-}
-
-.coming .clockdiv .dots:after {
-  content: ':';
-  position: relative;
-  font-size: 40px;
-  color: #55e6a5;
-}
-
-.coming .subscribe .form-group {
-  width: 90%;
-  margin: auto !important;
-  position: relative;
-}
-
-.coming .subscribe .form-group input {
-  width: 100%;
-  padding: 15px;
-  border-radius: 30px;
-  border: 0;
-  background: #303030;
-  color: #fff;
-}
-
-.coming .subscribe .form-group button {
-  padding: 15px 30px;
-  border-radius: 30px;
-  border: 0;
-  background: #55e6a5;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 
 /* Features & list & tabs & accordin
 -----------------------------------------------------------------*/
@@ -9131,33 +8889,7 @@ header.in-box {
   background: #c9f31d;
 }
 
-/* Video
------------------------------------------------------------------*/
-.video-sec {
-  position: relative;
-  overflow: hidden;
-  height: 600px;
-}
 
-.video-sec video {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: auto;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.video-sec .play-button a {
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  text-align: center;
-  border: 1px solid #fff;
-  border-radius: 50%;
-}
 
 /* ====================== [ Start Responsive ] ====================== */
 @media screen and (max-width: 1300px) {
@@ -10175,14 +9907,27 @@ header.in-box {
   }
 
   .skills-exp .skill-item {
-    display: block !important;
+    display: flex !important;
+    flex-wrap: wrap;
+
   }
 
+
   .skills-exp .skill-item .item {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     display: inline-block;
     width: calc(50% - 25px);
   }
+
+  .skills-exp .skill-item .item {
+    border-color: #fff;
+  }
+
+  .skills-exp .skill-item .item img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+
 
   .price-hr .item {
     display: block !important;

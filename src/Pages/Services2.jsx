@@ -231,8 +231,143 @@ const Services = () => {
                 </section>
                 {/* ==================== End services tabs ==================== */}
 
-                {/* ==================== Start about ==================== */}
-                <section className="intro-corp section-padding pt-0">
+                {/* ==================== Start skills ==================== */}
+                <section className="skills-exp section-padding sub-bg">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="sec-lg-head mb-80">
+                                    <div className="position-re">
+                                        <h6 className="dot-titl-non mb-10 wow fadeIn">Our Tools</h6>
+                                        <h2 className="fz-50 d-rotate wow">
+                                            <span className="rotate-text">Our Design Technology</span>
+                                        </h2>
+                                    </div>
+                                </div>
+
+                                <div className="skill-item d-flex flex-wrap justify-content-between align-align-items-center mb-50 md-mb50">
+
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/figma.png" alt />
+                                        </div>
+                                        <span className="mt-15">Figma</span>
+                                    </div>
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/illustrator.png" alt />
+                                        </div>
+                                        <span className="mt-15">Illustrator</span>
+                                    </div>
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/photoshop.png" alt />
+                                        </div>
+                                        <span className="mt-15">Photoshop</span>
+                                    </div>
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/xd.png" alt />
+                                        </div>
+                                        <span className="mt-15">Adobe Xd</span>
+                                    </div>
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/wordpress.png" alt />
+                                        </div>
+                                        <span className="mt-15">WordPress</span>
+                                    </div>
+                                    {/* <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/webflow.png" alt />
+                                        </div>
+                                        <span className="mt-15">Webflow</span>
+                                    </div> */}
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/shopify.png" alt />
+                                        </div>
+                                        <span className="mt-15">Shopify</span>
+                                    </div>
+
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/react.png" alt />
+                                        </div>
+                                        <span className="mt-15">React</span>
+                                    </div>
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/angular.png" alt />
+                                        </div>
+                                        <span className="mt-15">Angular</span>
+                                    </div>
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/vue.png" alt />
+                                        </div>
+                                        <span className="mt-15">Vue JS</span>
+                                    </div>
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/tailwind.png" alt />
+                                        </div>
+                                        <span className="mt-15">Tailwind CSS</span>
+                                    </div>
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/bootstrap.png" alt />
+                                        </div>
+                                        <span className="mt-15">Bootstrap</span>
+                                    </div>
+
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/next1.png" alt />
+                                        </div>
+                                        <span className="mt-15">Next JS</span>
+                                    </div>
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/node.png" alt />
+                                        </div>
+                                        <span className="mt-15">Node JS</span>
+                                    </div>
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/mongodb.png" alt />
+                                        </div>
+                                        <span className="mt-15">Mongo DB</span>
+                                    </div>
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/php.png" alt />
+                                        </div>
+                                        <span className="mt-15">PHP</span>
+                                    </div>
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/laravel.png" alt />
+                                        </div>
+                                        <span className="mt-15">Laravel</span>
+                                    </div>
+                                    <div className="item text-center">
+                                        <div className="icon-img-60 m-auto">
+                                            <img src="assets/imgs/freelancer/skills/mysql.png" alt />
+                                        </div>
+                                        <span className="mt-15">My SQL</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/* ==================== End skills ==================== */}
+
+
+                {/* ==================== Start FAQs ==================== */}
+                <section className="intro-corp section-padding pt-70">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-5">
@@ -292,7 +427,7 @@ const Services = () => {
                         </div>
                     </div>
                 </section>
-                {/* ==================== End about ==================== */}
+                {/* ==================== End FAQs ==================== */}
             </main>
 
 
